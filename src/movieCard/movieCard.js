@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './movieCard.scss'
-import BroComment from '../broComment/broComment.js';
+import BroButton from '../broButton/broButton.js';
 
 class MovieCard extends Component {
     constructor(props) {
@@ -11,10 +11,10 @@ class MovieCard extends Component {
     render() {
         return (
             <div className={"movieCard " + this.movieTitle}>
-                <BroComment bro="curt"/>
-                <BroComment bro="frank"/>
-                <BroComment bro="jake"/>
-                <BroComment bro="ray"/>
+                <BroButton bro="curt" movieTitle={this.props.movieTitle}/>
+                <BroButton bro="frank" movieTitle={this.props.movieTitle}/>
+                <BroButton bro="jake" movieTitle={this.props.movieTitle}/>
+                <BroButton bro="ray" movieTitle={this.props.movieTitle}/>
             </div>
         )
     }
