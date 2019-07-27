@@ -1,0 +1,19 @@
+$movieCardHeight: 8em;
+$movieCardWidth: 5.5em;
+
+.movieCard {
+    position: relative;
+    margin: 2em;
+    height: $movieCardHeight;
+    width: $movieCardWidth;
+  
+    background-size: cover;
+  }
+  
+  .midsommar {
+    background-image: url('https://rue-morgue.com/framework/uploads/2019/05/Midsommar-poster-web-691x1024.jpg');
+  }
+  
+  .climax {
+    background-image: url('https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.indiewire.com%2Fwp-content%2Fuploads%2F2018%2F08%2FCLIMAX-03-AFTER-ANGLAIS-RVB_A24_WEB.png%3Fw%3D752&f=1');
+  }
