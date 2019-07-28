@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './movieCard.scss'
 import BroButton from '../broButton/broButton.js';
+import BroComment from '../broComment/broComment.js'
 
 class MovieCard extends Component {
     constructor(props) {

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './broButton.scss'
+import BroComment from '../broComment/broComment.js'
 
 const broInitials = {
     curt: 'CF',
@@ -16,13 +17,13 @@ class BroButton extends Component {
         this.hasReview = (Math.random() > .3);
     }
 
-    showReview(text) {
-        return (() => alert(text))
+    showReview(movie) {
+        return (() => alert(broInitials[this.bro] + "'s " + movie + ' Review'))
     }
 
     render() {
         return (
-            <div
+            <button
                 className={"broButton " + (this.hasReview ? '' : 'empty')}
                 // onClick={() => {alert('hi!')}}
                 onClick={this.hasReview ? this.showReview(this.props.movieTitle) : {}}
@@ -30,7 +31,7 @@ class BroButton extends Component {
                 <div class="initials">
                 {broInitials[this.bro]}
                 </div>
-            </div>
+            </button>
         )
     }
 }
