@@ -37,4 +37,8 @@
     .initials {
         font-size: .75em;
     }
+
+    &:hover {
+        z-index: 15;
+    }
 }

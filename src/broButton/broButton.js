@@ -18,7 +18,7 @@ class BroButton extends Component {
     }
 
     showReview(movie) {
-        return (() => alert(broInitials[this.bro] + "'s " + movie + ' Review'))
+        return (() => alert(this.props.db.database().ref('movies/climax/year')))
     }
 
     render() {
@@ -26,9 +26,9 @@ class BroButton extends Component {
             <button
                 className={"broButton " + (this.hasReview ? 'with-comment' : 'empty')}
                 // onClick={() => {alert('hi!')}}
-                onClick={this.hasReview ? this.showReview(this.props.movieTitle) : {}}
+                onClick={this.hasReview ? this.showReview(this.props.movieTitle) : (() => {})}
             >
-                <div class="initials">
+                <div className="initials">
                 {broInitials[this.bro]}
                 </div>
             </button>
