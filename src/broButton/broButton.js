@@ -24,7 +24,7 @@ class BroButton extends Component {
     render() {
         return (
             <button
-                className={"broButton " + (this.hasReview ? '' : 'empty')}
+                className={"broButton " + (this.hasReview ? 'with-comment' : 'empty')}
                 // onClick={() => {alert('hi!')}}
                 onClick={this.hasReview ? this.showReview(this.props.movieTitle) : {}}
             >

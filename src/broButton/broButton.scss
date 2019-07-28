@@ -8,6 +8,7 @@
     border-radius: 2rem;
     background-color: darkred;
     color: white;
+    z-index: 5;
 
     &.empty {
         background-color: rgb(75, 75, 75);

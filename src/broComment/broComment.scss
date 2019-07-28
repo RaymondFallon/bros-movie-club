@@ -1,3 +1,15 @@
+@import '../movieCard/movieCard';
+
 .broComment {
     position: relative;
+    display: none;
+    background-color: grey;
+    padding: .5rem;
+    z-index: 10;
+    min-height: $movieCardHeight;
+    min-width: $movieCardWidth;
+}
+
+.broButton.with-comment:hover + .broComment, .broComment:hover {
+    display: inline-block;
 }
