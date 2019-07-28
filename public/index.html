@@ -23,6 +23,28 @@
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#config-web-app -->
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyAasOY923ruZMG7bkin7asYzYEtJzQOfEk",
+        authDomain: "bros-movie-club.firebaseapp.com",
+        databaseURL: "https://bros-movie-club.firebaseio.com",
+        projectId: "bros-movie-club",
+        storageBucket: "",
+        messagingSenderId: "1089997591376",
+        appId: "1:1089997591376:web:1cc06454dc387b07"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+    
     <div id="root"></div>
     <!--
       This HTML file is a template.
