@@ -6,10 +6,13 @@
     background-color: grey;
     padding: .5rem;
     z-index: 10;
-    min-height: $movieCardHeight;
-    min-width: $movieCardWidth;
+    // min-height: $movieCardHeight;
+    // min-width: $movieCardWidth;
+    height: 50vh;
+    width: 50vw;
+    overflow-y: scroll;
 }
 
-.broButton.with-comment:hover + .broComment, .broComment:hover {
-    display: inline-block;
-}
+// .broButton.with-comment:hover + .broComment, .broComment:hover {
+//     display: inline-block;
+// }

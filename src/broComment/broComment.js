@@ -4,13 +4,12 @@ import './broComment.scss'
 class BroComment extends Component {
     constructor(props) {
         super(props);
-
     }
 
     render() {
         return (
             <div className="broComment">
-                I'm a broComment!
+                {this.props.review}
             </div>
         )
     }
