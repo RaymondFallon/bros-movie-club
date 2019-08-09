@@ -1,13 +1,11 @@
 import React from 'react';
-import MovieCard from './movieCard/movieCard.js'
+import Page from './page/page.js'
 import './App.css';
-import * as movies from './movies.json'
 
 function App() {
-
-  console.log(movies);
-  console.log(movies["default"]);
-  var movie_data = movies["default"]
+  // console.log(movies);
+  // console.log(movies["default"]);
+  // var movie_data = movies["default"]
   // var movie_data = JSON.parse(movies);
 
   return (
@@ -15,8 +13,7 @@ function App() {
       <header className="App-header">
       </header>
       <body>
-        <MovieCard movieTitle="midsommar" data={movie_data["midsommar"]}/>
-        <MovieCard movieTitle="climax" data={movie_data["climax"]}/>
+        <Page />
       </body>
     </div>
   );
