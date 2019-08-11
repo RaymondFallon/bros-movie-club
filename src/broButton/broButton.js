@@ -3,22 +3,23 @@ import './broButton.scss'
 import BroComment from '../broComment/broComment.js'
 
 const broInitials = {
-    curt: 'CF',
-    frank: 'FF',
-    jake: 'JB',
-    ray: 'RF',
+    "Curt Foxworth": 'CF',
+    "Frank Falisi": 'FF',
+    "Jake Burbage": 'JB',
+    "Ray Fallon": 'RF',
 }
 
 class BroButton extends Component {
     constructor(props) {
         super(props);
-        this.movieTitle = this.props.movieTitle;
-        this.bro = this.props.bro;
-        this.hasReview = (this.props.review != "");
+        this.movieTitle = this.props.data["movie_title"]
+        this.bro = this.props.data["bro_name"];
+        this.hasReview = true;
+        this.review_text = this.props.data["description"];
     }
 
     showReview(movie) {
-        return (() => alert(this.props.review))
+        return (() => alert(this.props.review_text))
     }
 
     render() {

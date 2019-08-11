@@ -35,11 +35,7 @@ class Page extends Component {
     render() {
         return (
             <div className="Page">
-                {/* {console.log('hiii')}
-                {console.log(this.state.items)} */}
-                {this.state.items.map((movie, idx) => <MovieCard data={movie} /> )}
-                {/* <MovieCard movieTitle="midsommar" data={movie_data["midsommar"]} />
-                <MovieCard movieTitle="climax" data={movie_data["climax"]} /> */}
+                {this.state.items.map((movie, idx) => <MovieCard data={movie} key={idx} /> )}
             </div>
         )
     }
