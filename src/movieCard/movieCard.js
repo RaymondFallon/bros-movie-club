@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import './movieCard.scss'
 import BroButton from '../broButton/broButton.js';
-import BroComment from '../broComment/broComment.js'
 import axios from 'axios';
 
 class MovieCard extends Component {
@@ -37,18 +36,10 @@ class MovieCard extends Component {
     render() {
         return (
             <div>
-                <div className={"movieCard " + this.movieTitle}>
+                <div className={"movieCard " + this.movieTitle.replace(/[\s]/g, '-').replace("'", '')}>
                     {this.state.reviews.map((review, idx) => <BroButton data={review} key={idx} />)}
-                    {/* <BroButton bro="curt" movieTitle={this.props.movieTitle} review={this.reviews["curt"]}/>
-                    <BroComment bro="curt" movieTitle={this.props.movieTitle} review={this.reviews["curt"]}/>
-                    <BroButton bro="frank" movieTitle={this.props.movieTitle} review={this.reviews["frank"]}/>
-                    <BroComment bro="frank" movieTitle={this.props.movieTitle} review={this.reviews["frank"]}/>
-                    <BroButton bro="jake" movieTitle={this.props.movieTitle} review={this.reviews["jake"]}/>
-                    <BroComment bro="jake" movieTitle={this.props.movieTitle} review={this.reviews["jake"]}/>
-                    <BroButton bro="ray" movieTitle={this.props.movieTitle} review={this.reviews["ray"]}/>
-                    <BroComment bro="ray" movieTitle={this.props.movieTitle}  review={this.reviews["ray"]}/> */}
                 </div>
-                <h2>{this.movieTitle}</h2>
+                <h2 className="sr-only">{this.movieTitle}</h2>
             </div>
         )
     }

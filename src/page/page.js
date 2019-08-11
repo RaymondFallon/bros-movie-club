@@ -3,6 +3,7 @@ import './page.scss'
 import MovieCard from '../movieCard/movieCard.js'
 import axios from 'axios';
 import { thisExpression } from '@babel/types';
+import ReviewModal from '../reviewModal/reviewModal';
 
 class Page extends Component {
     constructor(props) {
@@ -36,6 +37,7 @@ class Page extends Component {
         return (
             <div className="Page">
                 {this.state.items.map((movie, idx) => <MovieCard data={movie} key={idx} /> )}
+                <ReviewModal />
             </div>
         )
     }

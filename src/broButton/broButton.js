@@ -12,24 +12,33 @@ const broInitials = {
 class BroButton extends Component {
     constructor(props) {
         super(props);
-        this.movieTitle = this.props.data["movie_title"]
-        this.bro = this.props.data["bro_name"];
-        this.hasReview = true;
-        this.review_text = this.props.data["description"];
+        this.movieTitle = this.props.data["movie_title"];
     }
 
+    state = {
+        bro: this.props.data["attributes"]["bro-name"],
+        review_text: this.props.data["attributes"]["description"]
+    };
+
     showReview(movie) {
-        return (() => alert(this.props.review_text))
+        return (() => {
+            let header = document.getElementById('review-modal-header');
+            let body = document.getElementById('review-modal-body');
+            let backdrop = document.getElementById('review-modal-backdrop');
+            header.innerText = this.state.bro;
+            body.innerText = this.state.review_text;
+            backdrop.classList.remove('hidden');
+        })
     }
 
     render() {
         return (
             <button
-                className={"broButton " + (this.hasReview ? 'with-comment' : 'empty')}
-                onClick={this.hasReview ? this.showReview(this.props.movieTitle) : (() => {})}
+                className={"broButton " + this.state.bro.replace(' ', '-')}
+                onClick={this.showReview(this.props.movieTitle)}
             >
                 <div className="initials">
-                {broInitials[this.bro]}
+                {broInitials[this.state.bro]}
                 </div>
             </button>
         )
