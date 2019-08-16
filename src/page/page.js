@@ -13,11 +13,12 @@ class Page extends Component {
     state = {
         error: null,
         isLoaded: false,
-        items: []
+        items: [],
+        movies_url: "https://bros-movie-api.herokuapp.com/movies"
     };
 
     componentDidMount() {
-        axios.get("https://bros-movie-api.herokuapp.com/movies").then(
+        axios.get(this.state.movies_url).then(
             result => {
                 this.setState({
                     isLoaded: true,

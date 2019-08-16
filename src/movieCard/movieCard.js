@@ -7,6 +7,7 @@ class MovieCard extends Component {
     constructor(props) {
         super(props);
         this.movieTitle = this.props.data["attributes"]["title"];
+        this.photoUrl = this.props.data["attributes"]["photo-url"];
         this.reviews_url = this.props.data["relationships"]["reviews"]["links"]["related"];
     }
 
@@ -37,6 +38,7 @@ class MovieCard extends Component {
         return (
             <div>
                 <div className={"movieCard " + this.movieTitle.replace(/[\s]/g, '-').replace("'", '')}>
+                    <img src={this.photoUrl} alt={this.movieTitle} className="movie-poster" />
                     {this.state.reviews.map((review, idx) => <BroButton data={review} key={idx} />)}
                 </div>
                 <h2 className="sr-only">{this.movieTitle}</h2>
